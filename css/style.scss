@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+body{
+    overflow:scroll;
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    width:100%;
+    font-family: 'Roboto Mono', monospace;
+
+}
+.container{
+    display:grid;
+    height:250vh;
+    grid-template-areas:
+    'h h'
+    'm m'
+    'c c'
+    'p p'
+    'f f';
+    grid-template-rows:65vh 195vh 80vh 35vh 40vh;
+    grid-auto-rows:auto;
+}
+header{
+    grid-area:h;
+    display:grid;
+    background-image:url('../images/desktop/image-header.jpg');
+    background-position:center;
+    background-size: cover;
+
+    .navbar{
+        display:grid;
+        grid-template-columns:1.5fr 1fr;
+
+        .title{
+            margin-left:1rem;
+            color:white;
+            font-size:1.2rem;
+            margin-top:-0.8rem;
+        }
+        .nav{
+            color:white;
+            font-size:1rem;
+            padding:1rem;
+            display:flex;
+            flex-direction: row;
+            justify-content:space-between;
+
+            li{
+                list-style: none;
+                cursor: pointer;
+            }
+        }
+        .h1{
+            grid-column:1/4;
+            text-align: center;
+            color:white;
+            margin-top:-7rem;
+            letter-spacing:0.8em;
+        }
+        .button{
+            margin-right:2rem;
+            margin-top:0.6rem;
+            
+            button{
+                font-size:0.9rem;
+                padding:0.7rem 1rem;
+                border-radius:2em;
+                border:none;
+                background:white;
+                font-weight:600;
+            }
+            button:hover{
+                background-color:rgb(104, 181, 226);
+                color:white;
+            }
+        }
+    }
+
+
+}
+.main{
+    grid-template-rows:repeat(3,65vh);
+    grid-area:m;
+    display:grid;
+    grid-template-columns:repeat(2,50vw);
+    .one{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin:1rem;
+        padding:0.3rem;
+
+        h1{
+            margin-left:0.2rem;
+            text-align: left;
+        }
+        h5{
+            position: relative;
+        }
+        h5::before{
+            content:'';
+            position:absolute;
+            width:110%;
+            height:4px;
+            bottom:-0.3rem;
+            background:yellow;
+            border-radius:3px;
+
+        }
+    }
+    .two{
+        background-image:url('../images/desktop/image-transform.jpg');
+        background-size:cover;
+        background-position:center;
+    }
+    .three{
+        background-image:url('../images/desktop/image-stand-out.jpg');
+        background-size:cover;
+        background-position:center;
+        
+    }
+    .four{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin:1rem;
+        padding:0.3rem;
+
+
+        h1{
+            margin-left:0.2rem;
+            text-align: left;
+        }
+        h5{
+            position: relative;
+        }
+        h5::before{
+            content:'';
+            position:absolute;
+            width:110%;
+            height:4px;
+            bottom:-0.3rem;
+            background-color:pink;
+            border-radius:3px;
+
+        }
+    }
+    .five{
+        background-image:url('../images/desktop/image-graphic-design.jpg');
+        background-position:top;
+        background-size:cover;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+        padding:0.7em;
+        font-size:1.1rem;
+        color:rgb(58, 93, 91);
+
+
+        
+    }
+    .six{
+        background-image:url('../images/desktop/image-photography.jpg');
+        background-position:top;
+        background-size:cover;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+        padding:0.7rem;
+        font-size:1.1rem;
+        color:rgb(20, 130, 173);
+    }
+}
+.content{
+    grid-area:c;
+    display: grid;
+    grid-template-columns:1fr;
+
+    .names{
+        background:rgb(246, 245, 242);
+        padding:2rem;
+        color:#999;
+        letter-spacing:0.5em;
+        font-weight:700;
+        font-size:1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content:center;
+    }
+
+    .people{
+        background:rgb(246, 245, 242);
+        gap:2rem;
+        padding:1rem;
+        display:flex;
+        justify-content: space-between;
+
+        .imgp{
+            padding:1rem;
+            display:flex;
+            flex-direction:column;
+            align-items: center;
+            
+            img{
+                border-radius:50%;
+            }
+
+        }
+        .h3h6{
+            text-align: center;
+
+            h6{ 
+                color:#888;
+                font-size:0.8rem;
+                justify-self: center;
+                
+            }
+            h3{
+                font-weight:700;
+            }
+            
+        }
+    }
+}
+.photo{
+    grid-area:p;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    .img1{
+       background-image:url('../images/desktop/image-gallery-milkbottles.jpg');
+       background-position: center;
+       background-size: cover;
+    }
+    .img2{
+        background-image:url('../images/desktop/image-gallery-orange.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+    .img3{
+       background-image:url('../images/desktop/image-gallery-cone.jpg');
+       background-position:center;
+       background-size:cover;
+    }
+    .img4{
+        background-image:url('../images/desktop/image-gallery-sugarcubes.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+}
+footer{
+    background-color:lightseagreen;
+    grid-area:f;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+
+    .tt{
+        color:rgb(58,93,91);
+    }
+
+    .navnames{
+        width:40%;
+        font-weight:bold;
+        color:rgb(58, 93, 91);
+        display: flex;
+        justify-content: space-around;
+
+        li{
+            list-style-type:none;
+        }
+    }
+    .ph{
+        display: flex;
+        width:30%;
+        align-items: center;
+        margin-top:3rem;
+        justify-content:space-around;
+    }
+}
+@media (max-width:500px) {
+    .container{
+        grid-template-columns:1fr;
+    }
+    
+}
